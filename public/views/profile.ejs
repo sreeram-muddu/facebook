@@ -1,0 +1,63 @@
+	<html ng-app="fb">
+	<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	  	<script src="js/app.js"></script>
+	  
+	</head>
+	<body>
+<form>
+
+
+<div class="container">
+<h4>OverView</h3>
+<span class="glyphicon glyphicon-briefcase"></span><b> Work: </b>{{org}} &nbsp;&nbsp;
+<span class="glyphicon glyphicon-gift"></span><b> Birthday:</b>{{bday}} <br><br>
+
+<span class="glyphicon glyphicon-education"></span><b> Education:</b> {{school}}<br><br>
+<span class="glyphicon glyphicon-phone"></span><b>Phone: </b>{{phn}}  &nbsp;&nbsp;
+<span class="glyphicon glyphicon-home"></span><b>Lives in :</b>{{city}}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<h4>Work and Education</h4>  
+  
+  <form class="form-inline" role="form">
+	
+  <div class="form-group" style="width:400px">
+
+      <input type="text" class="form-control glyphicon glyphicon-pencil" ng-model="org" id="email" placeholder="Enter Organisation Name">
+	 
+    </div>
+	
+    <div class="form-group" style="width:400px">
+      <label for="pwd">Study at:</label>
+      <input type="text" class="form-control" id="pwd" ng-model="school" placeholder="Enter School Name">
+    </div>
+
+    <div class="form-group" style="width:400px">
+      <label for="pwd">Lives at:</label>
+      <input type="text" class="form-control" id="pwd" ng-model="city" placeholder="Enter City name">
+    </div>
+
+
+    <br>
+  <h4>Contacts Information </h4>
+  
+  <div class="form-group" style="width:400px">
+      <label for="pwd">Phone Number:</label>
+      <input type="text" class="form-control" id="pwd" ng-model="phn" placeholder="Enter phone Name">
+    </div>
+	<div class="form-group" style="width:400px">
+      <label for="pwd">Email address:</label>
+      <input type="email" class="form-control" id="pwd" ng-model="email" placeholder="Enter email ">
+    </div>
+	<h4>Life Events:</h4>
+	<b>Born on</b>  <span class="glyphicon glyphicon-calendar"></span>{{bday}}
+	<br><br>
+	<b>Graduated from </b><span class="glyphicon glyphicon-book"></span> {{school}} <br><br>
+ <a href="/#profile"> <button type="submit" class="btn btn-success" ng-click="prof()">Update</button></a>
+</form>
+</div>
+	</body>
+	</html>

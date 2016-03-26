@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+var count=2;
+var rs=0;
+var cs=0;
+var cr=0;
+var cr2=0;
+var ray = [[0,0,0],[0,0,0],[0,0,0]];
+function mark(btn){
+   
+    
+    var property = document.getElementById(btn);
+    if (count == 7){
+        property.style.backgroundColor = "#FF0000";
+        count=2;        
+    }
+    else{
+        property.style.backgroundColor = "#7FFF00"
+        count=7;
+    }
+	if(btn == 'a')
+   {
+  
+   ray[0][0]=count;
+   //alert(ray[0][0]);
+   }
+  
+     if(btn == 'b')
+   {
+  
+   ray[0][1]=count;
+   //alert(ray[0][1]);
+   }
+     if(btn == 'c')
+   {
+  
+   ray[0][2]=count;
+   //alert(ray[0][2]);
+   } 
+   if(btn == 'd')
+   {
+  
+   ray[1][0]=count;
+   //alert(ray[1][0]);
+   }
+     if(btn == 'e')
+   {
+  
+   ray[1][1]=count;
+   //alert(ray[1][1]);
+   }
+     if(btn == 'f')
+   {
+  
+   ray[1][2]=count;
+   //alert(ray[1][2]);
+   }
+     if(btn == 'g')
+   {
+  
+   ray[2][0]=count;
+   //alert(ray[2][0]);
+   }
+     if(btn == 'h')
+   {
+  
+   ray[2][1]=count;
+   //alert(ray[2][1]);
+   }
+      if(btn == 'i')
+   {
+  
+   ray[2][2]=count;
+   //alert(ray[2][2]);
+   }
+   cr=0;
+	for( var i=0;i<3;i++)
+	{
+	cr=cr+ray[i][i];
+	rs=0;
+	cs=0;
+	for(var j=0;j<3;j++)
+	{
+	rs=rs+ray[i][j];
+	cs=cs+ray[j][i];
+	}
+//	alert("Col Sum"+cs);
+	if(rs==21 || cs==21)
+	alert("player 1 Won");
+	if(rs==6 || cs==6)
+	alert("player 2 Won");
+	}
+	//alert("Cross sum"+cr);
+	if(cr==21)
+	alert("player 1 Won");
+	if(cr==6)
+	alert("player 2 Won");
+	cr2=ray[0,2]+[1,1]+[2,0];
+	if(cr2==21)
+	alert("player 1 Won");
+	if(cr2==6)
+	alert("player 2 Won");
+	
+
+}
+</script>
+<div class="container">
+  <h2>Tic Tac Toe Game</h2>
+  <div class="btn-group">
+    <button type="button" id="a" class="btn btn-primary" onclick="mark('a')">cliq</button>
+    <button type="button" id="b" class="btn btn-primary" onclick="mark('b')">cliq</button>
+    <button type="button" id="c" class="btn btn-primary" onclick="mark('c')">cliq</button>
+  </div>
+  <br>
+  <div class="btn-group">
+    <button type="button" id="d" class="btn btn-primary" onclick="mark('d')">cliq</button>
+    <button type="button" id="e" class="btn btn-primary" onclick="mark('e')">cliq</button>
+    <button type="button" id="f" class="btn btn-primary" onclick="mark('f')">cliq</button>
+  </div>
+  <br>
+  <div class="btn-group">
+    <button type="button" id="g" class="btn btn-primary" onclick="mark('g')">cliq</button>
+    <button type="button" id="h" class="btn btn-primary" onclick="mark('h')">cliq</button>
+    <button type="button" id="i" class="btn btn-primary" onclick="mark('i')">cliq</button>
+  </div>
+</div>
+
+</body>
+</html>

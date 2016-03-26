@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <title>Facebook</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel='stylesheet' href='/stylesheets/style.css' />
+	
+<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.min.js"></script>
+	<script src="/js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	
+  
+
+
+</head>
+<body style="padding:0px" ng-app="fb">
+
+<div class="container-fluid" style="background-color:#3b5998; padding: 4px">
+<br><span class="navbar-brand logo" style="font-family:Tahoma;font-size: 28px; color: white">Facebook</span>
+  <form class="form-inline" role="form" style="float:right;color: white" ng-controller="homelogin">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control input-sm" id="email" ng-model="email" placeholder="Enter email" >
+    </div>
+    <div class="form-group">&nbsp;
+      <label for="pwd">Password</label>
+      <input type="password" class="form-control input-sm" id="pwd" ng-model="pass" placeholder="Enter password">
+    </div>&nbsp;
+    <button type="submit" class="btn btn-primary btn-xs" ng-click="sendlogin()">Login</button>&nbsp;&nbsp;
+	<br><br>
+  </form>
+  
+  <br>
+</div>
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-6">
+	<br><br><br><br>
+  <h2> Connect with friends and the
+world around you on Facebook.</h2>
+<img src="/images/logo1.jpg">
+    </div>
+
+    <div class="col-sm-6" style="line-height:125%"> 
+	<br><br>
+      <h3 style="font-size: 28px">SignUp</h3>        
+      <span style="font-size: 18px">It's free and always will be.</span>
+	  <br>
+	   <form class="form-inline" role="form" ng-controller="sign">
+	   <div class="form-group">
+<br>
+      <input type="text" class="form-control" id="email" placeholder="First Name" style="width:185px" ng-model="sfname">
+    </div>
+    <div class="form-group">
+  <br>&nbsp;
+      <input type="text" class="form-control" id="pwd" placeholder="Last Name" style="width:185px" ng-model="slname">
+    </div>
+	<br><br>
+	  <div class="form-group">
+
+  
+      <input type="email" class="form-control" id="pwd2" placeholder="Email Address"style="width:185px" ng-model="semail" >
+    </div>&nbsp;&nbsp;
+	<div class="form-group">
+
+  
+      <input type="email" class="form-control" id="pwd4" placeholder="Re-enter Email Address" style="width:185px" ng-model="semail2">
+    </div>
+	<br><br>
+	<div class="form-group">
+
+  
+      <input type="password" class="form-control" id="pwd4" placeholder="Enter password" style="width:185px" ng-model="spass" >
+    </div>
+	&nbsp;
+    <div class="form-group">
+	
+	<input type="date" class="form-control" name="bday" style="width:185px" ng-model="sbday">
+	</div>
+	<br><br>
+	<label class="radio-inline">
+      <input type="radio" name="optradio" ng-model="sg1">Female
+    </label>&nbsp;
+    <label class="radio-inline">
+      <input type="radio" name="optradio" ng-model="sg2">Male
+    </label><br> <br>
+       <span class="small"> By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</span>
+    <br><br>
+    <button type="submit" class="btn btn-primary btn-md" ng-click="signup()">Signup</button>
+
+	</form>
+	  
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
